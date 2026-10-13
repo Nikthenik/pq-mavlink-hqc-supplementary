@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+message: "If you use this material, please cite the manuscript and this archive."
+title: "Supplementary material: Post-Quantum Key Establishment over MAVLink"
+type: software
+version: 1.0.0
+license: GPL-3.0
+repository-code: "https://github.com/Nikthenik/pq-mavlink-hqc-supplementary"
+authors:
+  - family-names: "Segura Castro"
+    given-names: "Nicolás"
+    affiliation: "Systems and Computing Engineering Department, Universidad de los Andes, Bogotá, Colombia"
+    orcid: "https://orcid.org/0009-0006-7721-6944"
+  - family-names: "Casadiego"
+    given-names: "Carlos David"
+    affiliation: "Systems and Computing Engineering Department, Universidad de los Andes, Bogotá, Colombia"
+    orcid: "https://orcid.org/0009-0002-8710-3514"
+  - family-names: "Vera"
+    given-names: "Javier"
+    affiliation: "Systems and Computing Engineering Department, Universidad de los Andes, Bogotá, Colombia"
+    orcid: "https://orcid.org/0009-0007-8949-1270"
+  - family-names: "Gauthier-Umaña"
+    given-names: "Valérie"
+    affiliation: "Systems and Computing Engineering Department, Universidad de los Andes, Bogotá, Colombia"
+    orcid: "https://orcid.org/0000-0003-0909-7091"
+preferred-citation:
+  type: article
+  title: "Post-Quantum Key Establishment over MAVLink: Measured Cost and Integration Pitfalls of HQC on a Small UAV"
+  journal: "IEEE Transactions on Aerospace and Electronic Systems"
+  notes: "Submitted (resubmission of TAES-2026-2045)."
+  authors:
+    - family-names: "Segura Castro"
+      given-names: "Nicolás"
+      orcid: "https://orcid.org/0009-0006-7721-6944"
+    - family-names: "Casadiego"
+      given-names: "Carlos David"
+      orcid: "https://orcid.org/0009-0002-8710-3514"
+    - family-names: "Vera"
+      given-names: "Javier"
+      orcid: "https://orcid.org/0009-0007-8949-1270"
+    - family-names: "Gauthier-Umaña"
+      given-names: "Valérie"
+      orcid: "https://orcid.org/0000-0003-0909-7091"

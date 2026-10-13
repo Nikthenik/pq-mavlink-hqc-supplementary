@@ -1,0 +1,46 @@
+=== selfcheck_pico -- HQC-128 (PQClean) en RP2040 ===
+
+arbol del KEM compilado: b402392
+
+PQCLEAN_HQC128_CLEAN_CRYPTO_PUBLICKEYBYTES = 2249
+
+PQCLEAN_HQC128_CLEAN_CRYPTO_CIPHERTEXTBYTES = 4433
+
+N_MUESTRAS = 100
+
+
+
+  [0/100] enc 57530 us, fallos hasta ahora: 0
+
+  [10/100] enc 57409 us, fallos hasta ahora: 2
+
+  [20/100] enc 57484 us, fallos hasta ahora: 2
+
+  [30/100] enc 57299 us, fallos hasta ahora: 2
+
+  [40/100] enc 57425 us, fallos hasta ahora: 3
+
+  [50/100] enc 57512 us, fallos hasta ahora: 4
+
+  [60/100] enc 57143 us, fallos hasta ahora: 5
+
+  [70/100] enc 57659 us, fallos hasta ahora: 6
+
+  [80/100] enc 57314 us, fallos hasta ahora: 7
+
+  [90/100] enc 57586 us, fallos hasta ahora: 8
+
+
+
+=== Resultado ===
+
+descapsulaciones que NO devolvieron el secreto encapsulado: 8 de 100
+
+crypto_kem_dec devolvio distinto de 0: 8 de 100
+
+encapsulacion: mediana 57520 us, p95 57775 us, min 56650 us, max 57851 us
+
+
+
+=== FIN ===
+

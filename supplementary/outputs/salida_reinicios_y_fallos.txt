@@ -1,0 +1,30 @@
+Restarts (R1-R5, 105 attempts)
+  distinct FC source ports                  101
+  attempts sharing a port with another       7
+    fc_20251113_184155 attempt  3, port 34442
+    fc_20251113_184155 attempt  4, port 34442
+    fc_20251113_190020 attempt 20, port 57534
+    fc_20251113_190020 attempt 21, port 57534
+    fc_20251113_191218 attempt 15, port 57092
+    fc_20251113_191218 attempt 16, port 57092
+    fc_20251113_191218 attempt 17, port 57092
+  ports whose first FC frame has seq 0 or 1  101
+Start-up: completed attempts whose clear-text 'ArduPilot Ready' follows HQC_HELLO_ACK (a lower bound): 7
+  fc_20251113_180441 attempt  2: 0.18 s after HQC_HELLO_ACK
+  fc_20251113_182734 attempt  3: 0.18 s after HQC_HELLO_ACK
+  fc_20251113_182734 attempt 11: 0.54 s after HQC_HELLO_ACK
+  fc_20251113_190020 attempt 22: 0.64 s after HQC_HELLO_ACK
+  fc_20251113_191218 attempt  8: 0.51 s after HQC_HELLO_ACK
+  fc_20251113_191218 attempt 14: 0.50 s after HQC_HELLO_ACK
+  fc_20251113_191218 attempt 23: 0.43 s after HQC_HELLO_ACK
+Maxima of Table VI, Block A, and without the attempts listed under Start-up
+  FC window HELLO_ACK->STATUS (s)    max 0.760 (fc_20251113_190020 attempt 22); without those attempts 0.619
+  ciphertext stream (s)              max 0.717 (fc_20251113_190020 attempt 22); without those attempts 0.589
+  last PK_ACK -> next CT_CHUNK (ms)  max 35.249 (fc_20251113_190020 attempt 22); without those attempts 30.993
+Completed attempts followed by at least one signed FC frame: 100
+Incomplete attempts (no HQC_STATUS)
+  fc_20251113_184155 attempt  3: lasts 0.53 s, PK_ACK 11, CT_CHUNK  97, HQC_STATUS 0, signed frames before the next attempt 0 of 10
+  fc_20251113_190020 attempt 20: lasts 0.53 s, PK_ACK 11, CT_CHUNK  97, HQC_STATUS 0, signed frames before the next attempt 0 of 5
+  fc_20251113_191218 attempt 15: lasts 0.53 s, PK_ACK 11, CT_CHUNK  97, HQC_STATUS 0, signed frames before the next attempt 0 of 9
+  fc_20251113_191218 attempt 16: lasts 0.53 s, PK_ACK 11, CT_CHUNK  97, HQC_STATUS 0, signed frames before the next attempt 0 of 8
+  fc_20251113_191218 attempt 17: lasts 0.31 s, PK_ACK  9, CT_CHUNK  49, HQC_STATUS 0, signed frames before the next attempt 0 of 16

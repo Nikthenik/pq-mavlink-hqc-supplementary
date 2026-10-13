@@ -1,0 +1,18 @@
+================================================================================================
+R1-R5: handshakes completados, formato de CT_CHUNK validado en todos
+================================================================================================
+handshakes                                   100
+reenvios de CT_CHUNK por handshake           min 55  p50 67  max 72  (media 64.2)
+cota de reenvios por temporizador            min 2  max 2
+  (floor((ultimo CT_CHUNK - (HELLO_ACK - 100 ms)) / 300 ms): el temporizador
+   exige 300 ms desde t_last_tx y lo reinicia al disparar)
+reenvios que el temporizador NO puede explicar  min 53  max 70
+fraccion minima atribuible al manejador de CT_ACK  96.4 %
+
+================================================================================================
+Traza bidireccional (n = 1): retardo de cada reenvio respecto al CT_ACK previo
+================================================================================================
+CT_CHUNK enviados 97, fragmentos 42, reenvios 55, CT_ACK recibidos 42
+reenvio - CT_ACK previo (ms)         p50 19.20  p95 108.82  max 118.53
+reenvio - envio previo del mismo (ms) p50 90.5  p95 162.3  max 191.1
+reenvios a menos de 300 ms del envio previo del mismo fragmento: 55 de 55

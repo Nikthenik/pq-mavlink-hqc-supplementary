@@ -1,0 +1,52 @@
+# Component build file: copy to main/CMakeLists.txt in an ESP-IDF project whose top-level
+# CMakeLists.txt is ../CMakeLists.txt, with main.c, main_selfcheck.c and randombytes_esp32.c in main/.
+#
+# The HQC-128 sources are the vendored PQClean copy of the ArduPilot fork
+# (https://github.com/cdcp2/ardupilot_post_quantum_kem): <clone>/libraries/AP_KEM/vendor/pqclean,
+# checked out at cd7be51~1 (unmodified reference) or b402392 (hand-optimized variant, finding F6).
+# Pass it as idf.py -DPQCLEAN_VENDOR=... or export PQCLEAN_VENDOR in the environment.
+if(NOT PQCLEAN_VENDOR)
+    set(PQCLEAN_VENDOR "$ENV{PQCLEAN_VENDOR}")
+endif()
+if(NOT PQCLEAN_VENDOR)
+    message(FATAL_ERROR "Set PQCLEAN_VENDOR to <clone of cdcp2/ardupilot_post_quantum_kem>/libraries/AP_KEM/vendor/pqclean")
+endif()
+set(HQC128_CLEAN "${PQCLEAN_VENDOR}/crypto_kem/hqc-128/clean")
+
+# main.c times 500 encapsulations; main_selfcheck.c also decapsulates and counts failures
+# (-DHQC_MAIN=main_selfcheck.c). -DARBOL=<commit> writes the tree's commit into the serial log.
+if(NOT HQC_MAIN)
+    set(HQC_MAIN main.c)
+endif()
+
+set(HQC_SRCS
+    "${HQC_MAIN}"
+    "randombytes_esp32.c"
+    "${PQCLEAN_VENDOR}/common/fips202.c"
+    "${HQC128_CLEAN}/code.c"
+    "${HQC128_CLEAN}/fft.c"
+    "${HQC128_CLEAN}/gf2x.c"
+    "${HQC128_CLEAN}/gf.c"
+    "${HQC128_CLEAN}/hqc.c"
+    "${HQC128_CLEAN}/kem.c"
+    "${HQC128_CLEAN}/parsing.c"
+    "${HQC128_CLEAN}/reed_muller.c"
+    "${HQC128_CLEAN}/reed_solomon.c"
+    "${HQC128_CLEAN}/shake_ds.c"
+    "${HQC128_CLEAN}/shake_prng.c"
+    "${HQC128_CLEAN}/vector.c"
+)
+# The variant (from cd7be51 on) adds two files that the reference tree does not have.
+foreach(extra gf2x_sparse.c vector_sparse.c)
+    if(EXISTS "${HQC128_CLEAN}/${extra}")
+        list(APPEND HQC_SRCS "${HQC128_CLEAN}/${extra}")
+    endif()
+endforeach()
+
+idf_component_register(
+    SRCS ${HQC_SRCS}
+    INCLUDE_DIRS "${PQCLEAN_VENDOR}/common" "${HQC128_CLEAN}"
+)
+if(ARBOL)
+    target_compile_definitions(${COMPONENT_LIB} PRIVATE ARBOL="${ARBOL}")
+endif()

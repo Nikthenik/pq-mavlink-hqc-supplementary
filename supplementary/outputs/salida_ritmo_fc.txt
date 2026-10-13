@@ -1,0 +1,17 @@
+================================================================================================================
+RITMO DEL FLIGHT CONTROLLER  --  R1-R5, 100 handshakes completados, Parrot Bebop (Cortex-A9)
+================================================================================================================
+  Intervalo entre PK_ACK consecutivos                n=1000  media  10.47  p50  10.00  p95  25.03  min   0.00  max  38.48 ms
+  Ultimo PK_ACK -> siguiente CT_CHUNK (contiene encap pk_e) n=100   media  18.15  p50  19.78  p95  25.84  min   6.57  max  35.25 ms
+  Intervalo entre rafagas de emision de CT_CHUNK     n=2494  media  15.27  p50  12.16  p95  30.09  min   4.05  max 138.64 ms
+
+  Frecuencia implicita del procesado de fragmentos: 100 Hz (1 / mediana del intervalo PK_ACK)
+
+================================================================================================================
+UNICO HANDSHAKE COMPLETO BIDIRECCIONAL (n = 1)
+================================================================================================================
+  HELLO (GCS->FC) -> HELLO_ACK (FC->GCS)              54.66 ms
+  HELLO_ACK -> primer CT_CHUNK                        0.65 ms
+  -> el FC ya tenia ct_s calculado al responder al HELLO: HELLO->HELLO_ACK
+     contiene la encapsulacion a la clave estatica pk_s, no solo la red.
+  ultimo CT_ACK (GCS) -> FINISH (GCS)                 2.01 ms   <- computo de la GCS (x86)

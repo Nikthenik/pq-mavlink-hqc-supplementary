@@ -1,0 +1,20 @@
+Captures: fc_20251113_180441, fc_20251113_182734, fc_20251113_184155, fc_20251113_190020, fc_20251113_191218 + clear_fc_20251114_153259
+Ciphertexts reassembled: 211 complete of 211 started
+
+ct_s (to the static key pk_s)
+  complete ciphertexts : 106, in 106 sessions
+  distinct ciphertexts : 1
+  distinct salts       : 1; salt == 0x00*16 in 106 of 106
+    salt 00000000000000000000000000000000  x106
+
+ct_e (to the ephemeral key pk_e)
+  complete ciphertexts : 105, in 105 sessions
+  distinct ciphertexts : 105
+  distinct salts       : 1; salt == 0x00*16 in 105 of 105
+    salt 00000000000000000000000000000000  x105
+
+Data-plane keystream (bidirectional trace, FC HEARTBEAT frames after activation)
+  encrypted HEARTBEAT frames : 964
+  distinct sequence numbers  : 256
+  distinct ciphertexts       : 256
+  sequence numbers with more than one ciphertext: 0

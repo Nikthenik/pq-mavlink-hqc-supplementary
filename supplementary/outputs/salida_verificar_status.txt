@@ -1,0 +1,9 @@
+Rafagas R1-R5: 105 | con HQC_STATUS: 100
+  R_status_por_rafaga_1: 100
+HQC_STATUS de exito (value=0, detail=0): 100 | de error: 0
+Primer HQC_STATUS de la rafaga es el de exito: 100
+session_id igual al de HELLO_ACK: 100 | distinto: 0
+Rafagas con HQC_ABORT: 0
+Traza bidireccional: con STATUS 1 | exito 1 | error 0 | sid coincide 1
+Combinaciones (status, detail, value) observadas:
+  status=0 detail=0 value=0  x101

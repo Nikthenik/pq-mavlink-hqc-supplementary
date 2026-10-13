@@ -1,0 +1,16 @@
+  [10/100] enc 971562 us, fallos hasta ahora: 0
+  [20/100] enc 971562 us, fallos hasta ahora: 0
+  [30/100] enc 971562 us, fallos hasta ahora: 0
+  [40/100] enc 971562 us, fallos hasta ahora: 0
+  [50/100] enc 971562 us, fallos hasta ahora: 0
+  [60/100] enc 971562 us, fallos hasta ahora: 0
+  [70/100] enc 971562 us, fallos hasta ahora: 0
+  [80/100] enc 971562 us, fallos hasta ahora: 0
+  [90/100] enc 971562 us, fallos hasta ahora: 0
+
+=== Resultado ===
+descapsulaciones que NO devolvieron el secreto encapsulado: 0 de 100
+crypto_kem_dec devolvio distinto de 0: 0 de 100
+encapsulacion: mediana 971562 us, p95 971633 us, min 971562 us, max 971832 us
+
+=== FIN ===

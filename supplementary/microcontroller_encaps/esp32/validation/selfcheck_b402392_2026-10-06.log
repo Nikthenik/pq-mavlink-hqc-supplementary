@@ -1,0 +1,75 @@
+0,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15660
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF c54ee794 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct  6 2026 22:20:20[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09cd4h ( 40148) map[0m
+[0;32mI (118) esp_image: segment 1: paddr=00019cfc vaddr=3ffb0000 size=02768h ( 10088) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=0001c46c vaddr=40080000 size=03bach ( 15276) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=11db4h ( 73140) map[0m
+[0;32mI (158) esp_image: segment 4: paddr=00031ddc vaddr=40083bac size=090e0h ( 37088) load[0m
+[0;32mI (179) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (179) boot: Disabling RNG early entropy source...[0m
+[0;32mI (191) cpu_start: Multicore app[0m
+[0;32mI (200) cpu_start: Pro cpu start user code[0m
+[0;32mI (200) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (200) app_init: Application information:[0m
+[0;32mI (203) app_init: Project name:     hqc_encaps_esp32[0m
+[0;32mI (208) app_init: App version:      1[0m
+[0;32mI (213) app_init: Compile time:     Oct  6 2026 22:20:38[0m
+[0;32mI (219) app_init: ELF file SHA256:  50392aa5c...[0m
+[0;32mI (224) app_init: ESP-IDF:          c54ee794[0m
+[0;32mI (229) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (234) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (239) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (244) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (251) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (257) heap_init: At 3FFB5A10 len 0002A5F0 (169 KiB): DRAM[0m
+[0;32mI (263) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (269) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008CC8C len 00013374 (76 KiB): IRAM[0m
+[0;32mI (284) spi_flash: detected chip: generic[0m
+[0;32mI (287) spi_flash: flash io: dio[0m
+[0;33mW (291) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (304) main_task: Started on CPU0[0m
+[0;32mI (314) main_task: Calling app_main()[0m
+=== selfcheck_esp32 -- HQC-128 (PQClean) en ESP32 (Xtensa LX6) ===
+arbol del KEM compilado: b402392
+PQCLEAN_HQC128_CLEAN_CRYPTO_PUBLICKEYBYTES = 2249
+PQCLEAN_HQC128_CLEAN_CRYPTO_CIPHERTEXTBYTES = 4433
+N_MUESTRAS = 100
+
+  [0/100] enc 49668 us, fallos hasta ahora: 0
+  [10/100] enc 49302 us, fallos hasta ahora: 0
+  [20/100] enc 49181 us, fallos hasta ahora: 2
+  [30/100] enc 49423 us, fallos hasta ahora: 2
+  [40/100] enc 49423 us, fallos hasta ahora: 3
+  [50/100] enc 49423 us, fallos hasta ahora: 3
+  [60/100] enc 49423 us, fallos hasta ahora: 6
+  [70/100] enc 49060 us, fallos hasta ahora: 6
+  [80/100] enc 49301 us, fallos hasta ahora: 7
+  [90/100] enc 49180 us, fallos hasta ahora: 7
+
+=== Resultado ===
+descapsulaciones que NO devolvieron el secreto encapsulado: 7 de 100
+crypto_kem_dec devolvio distinto de 0: 7 de 100
+encapsulacion: mediana 49302 us, p95 49442 us, min 48696 us, max 49668 us
+
+=== FIN ===

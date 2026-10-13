@@ -1,0 +1,3 @@
+# median wall time over 300 runs, Intel Core i7-12700K, gcc 13.3 -O2, real random source
+validated (fork tree before cd7be51): median over 300 runs (us): keypair 1340.2  encaps 2716.8  decaps 4310.2
+evaluated (b402392 variant):          median over 300 runs (us): keypair 30.9  encaps 105.3  decaps 434.8

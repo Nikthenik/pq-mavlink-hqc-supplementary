@@ -1,0 +1,7 @@
+================================================================================================
+TRAFICO QUE EMITE EL FC -- R1-R5 (mismas ventanas que contencion_canal.py)
+================================================================================================
+  Tramas del FC                  18039
+  de ellas, mensajes HQC         12418   (68.8 %)
+  STATUSTEXT fuera de handshakes 828 en 1776 s   -> 0.47 /s
+  STATUSTEXT dentro de handshakes 1415 en 57.9 s  -> 24.4 /s

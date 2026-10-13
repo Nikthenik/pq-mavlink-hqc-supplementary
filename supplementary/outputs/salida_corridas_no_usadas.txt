@@ -1,0 +1,10 @@
+Earlier stress runs not used in the paper (12 November 2025), same criteria as Table VI, Block A
+
+fc_20251112_142951: 15 attempts, 15 with an HQC_STATUS, 15 completed (HQC_KEX_OK with the session_id of their HQC_HELLO_ACK)
+  FC window HELLO_ACK -> STATUS (s)          n=15   media 0.552  p50 0.550  p95 0.559  min 0.547  max 0.570
+
+fc_20251112_154826: 49 attempts, 47 with an HQC_STATUS, 47 completed (HQC_KEX_OK with the session_id of their HQC_HELLO_ACK)
+  FC window HELLO_ACK -> STATUS (s)          n=47   media 0.574  p50 0.551  p95 0.569  min 0.548  max 1.518
+
+Both runs: 64 attempts, 62 with an HQC_STATUS, 62 completed
+  FC window HELLO_ACK -> STATUS (s)          n=62   media 0.569  p50 0.550  p95 0.570  min 0.547  max 1.518

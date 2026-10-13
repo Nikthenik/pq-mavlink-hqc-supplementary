@@ -1,0 +1,4 @@
+Finalizacion 100/105 = 95.2 %  IC95 Clopper-Pearson [89.2 %, 98.4 %]
+Ventana FC HELLO_ACK->STATUS (s)           n=100  mediana 0.551  IC95 [0.550, 0.551]  (rangos 40 y 61, cobertura 0.9648)
+Flujo de ciphertext (s)                    n=100  mediana 0.527  IC95 [0.523, 0.529]  (rangos 40 y 61, cobertura 0.9648)
+Ultimo PK_ACK -> siguiente CT_CHUNK (ms)   n=100  mediana 19.78  IC95 [19.12, 19.95]  (rangos 40 y 61, cobertura 0.9648)

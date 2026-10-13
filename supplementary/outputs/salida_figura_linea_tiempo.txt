@@ -1,0 +1,12 @@
+sesion: 604.9 ms de HELLO a STATUS
+  HELLO           gcs   1  fc   0  dup   0
+  HELLO_ACK       gcs   0  fc   1  dup   0
+  PK_CHUNK        gcs  11  fc   0  dup   0
+  PK_ACK          gcs   0  fc  11  dup   0
+  CT_CHUNK ct_s   gcs   0  fc  21  dup  27
+  CT_CHUNK ct_e   gcs   0  fc  21  dup  28
+  CT_ACK          gcs  42  fc   0  dup   0
+  FINISH          gcs   1  fc   0  dup   0
+  STATUS          gcs   0  fc   1  dup   0
+  STATUSTEXT      gcs   0  fc  16  dup   0
+escrito timeline.dat

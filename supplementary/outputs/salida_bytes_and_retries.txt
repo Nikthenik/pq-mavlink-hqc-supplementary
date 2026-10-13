@@ -1,0 +1,13 @@
+Bidirectional session clear_fc_20251114_153259: 165 HQC frames, 26490 B on the wire (with repeats)
+  without the repeated CT_CHUNK fragments: 14124 B
+  at 57 600 baud 8N1 (5760 B/s): 4.60 s with repeats, 2.45 s without
+  objects alone HQC-128    11115 B -> 1.93 s
+  objects alone ML-KEM-512  2336 B -> 0.41 s
+  bytes per message id: {61000: 76, 61001: 66, 61002: 2535, 61003: 22333, 61004: 1152, 61005: 54, 61006: 33, 61007: 241}
+
+Incomplete attempts in R1-R5: gap until the next attempt (FC timeout: 20 s)
+  fc_20251113_184155 attempt   3: lasts 0.53 s; next attempt after 9.4 s
+  fc_20251113_190020 attempt  20: lasts 0.53 s; next attempt after 4.5 s
+  fc_20251113_191218 attempt  15: lasts 0.53 s; next attempt after 4.5 s
+  fc_20251113_191218 attempt  16: lasts 0.53 s; next attempt after 8.4 s
+  fc_20251113_191218 attempt  17: lasts 0.31 s; next attempt after 15.2 s

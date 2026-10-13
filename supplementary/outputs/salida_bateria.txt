@@ -1,0 +1,25 @@
+SYS_STATUS from the FC (sysid 1), ground-station captures
+capture                              frames  minutes SoC first>last   fall  current_battery values
+gcs_20251113_135046.pcapng                2      0.0       56 > 56       0  [0]
+gcs_20251113_145049.pcapng                2      0.0       55 > 55       0  [0]
+gcs_20251113_180441.pcapng               11      3.7       53 > 48       5  [-1, 0]
+gcs_20251113_182734.pcapng               11      4.4       75 > 71       4  [-1, 0]
+gcs_20251113_184155.pcapng               11      5.0       67 > 63       4  [-1, 0]
+gcs_20251113_190020.pcapng               17      6.1       82 > 76       6  [-1, 0]
+gcs_20251113_191218.pcapng               17      8.4       73 > 67       6  [-1, 0]
+gcs_20251114_164939.pcapng                4     10.0       51 > 41      10  [0]
+gcs_20251114_171039.pcapng                4     10.0       34 > 24      10  [0]
+gcs_aesctr20251114_183415.pcapng          4     10.0       69 > 61       8  [0]
+gcs_chacha20251114_182011.pcapng          4     10.0       81 > 72       9  [0]
+plain_gcs_20251114_153259.pcapng          4     10.0       51 > 41      10  [0]  (same FC frames as gcs_20251114_164939.pcapng)
+plain_gcs_20251114_155529.pcapng          4     10.0       51 > 41      10  [0]  (same FC frames as gcs_20251114_164939.pcapng)
+
+largest current_battery value in any sample: 0
+samples with current_battery = -1 (not sent by the autopilot): 7
+state-of-charge fall in the 4 distinct ten-minute runs: 10, 10, 8, 9 points
+
+Ten-minute runs: label in the withdrawn idle-battery table, and the capture of the Wi-Fi link
+  gcs_20251114_164939.pcapng         not in that table  fc_20251114_164939.pcapng: cipher selected in HQC_HELLO_ACK ChaCha20; completed handshakes (HQC_STATUS HQC_KEX_OK, same session_id) 1; FC HEARTBEAT frames after the first HQC_HELLO_ACK 959, readable in the clear 0
+  gcs_20251114_171039.pcapng         cleartext          fc_20251114_171039.pcapng: cipher selected in HQC_HELLO_ACK ChaCha20; completed handshakes (HQC_STATUS HQC_KEX_OK, same session_id) 1; FC HEARTBEAT frames after the first HQC_HELLO_ACK 948, readable in the clear 0
+  gcs_aesctr20251114_183415.pcapng   AES-CTR            no capture of the Wi-Fi link
+  gcs_chacha20251114_182011.pcapng   ChaCha20           no capture of the Wi-Fi link

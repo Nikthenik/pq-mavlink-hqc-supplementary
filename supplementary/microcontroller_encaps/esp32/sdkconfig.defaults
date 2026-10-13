@@ -1,0 +1,22 @@
+# ESP-IDF settings for the HQC-128 benchmark and self-check: single-shot binaries, no OTA, no
+# networking. Three options; everything else is ESP-IDF's default (CPU at 160 MHz included).
+
+# Task watchdog off. The benchmark loop runs 500 encapsulations without yielding (unlike the flight
+# code, which yields through the scheduler), and on this particular board (crystal measured at
+# 41.01 MHz, off the nominal 40 MHz) the idle-task watchdog check crashed with LoadProhibited before
+# the benchmark printed anything. The watchdog plays no part in the measurement, which uses
+# esp_timer_get_time().
+CONFIG_ESP_TASK_WDT_INIT=n
+
+# Main-task stack. The default 3584 B is too small for HQC-128's internal buffers (double exception in
+# crypto_kem_keypair()). 32 KiB was enough for main.c, which only encapsulates; main_selfcheck.c also
+# decapsulates and overflowed 32 KiB (heap-corruption assert at tlsf.c:496 inside crypto_kem_dec(),
+# then a reboot loop), so it is 64 KiB, still small against the ~167 KiB of free DRAM.
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=65536
+
+# Optimization level. ESP-IDF builds Debug (about -Og) unless told otherwise, and nothing said
+# otherwise in the runs of 22 September 2026 and in the first reference run of 6 October 2026
+# (archived as "debug" in README.md). With PERF (-O2) the reference encapsulation drops from
+# 1 228 786 us to 971 551 us. The Pico SDK builds Release (-O3) by default, so the Pico runs were
+# unaffected.
+CONFIG_COMPILER_OPTIMIZATION_PERF=y

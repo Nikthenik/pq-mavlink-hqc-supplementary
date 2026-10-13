@@ -1,0 +1,46 @@
+{
+  "title": "Supplementary material: Post-Quantum Key Establishment over MAVLink: Measured Cost and Integration Pitfalls of HQC on a Small UAV",
+  "upload_type": "software",
+  "description": "<p>Supplementary material of the manuscript \"Post-Quantum Key Establishment over MAVLink: Measured Cost and Integration Pitfalls of HQC on a Small UAV\", submitted to IEEE Transactions on Aerospace and Electronic Systems (resubmission of TAES-2026-2045).</p><p>It contains the scripts that recompute every capture-derived result of Sections VI and VII of the manuscript (Tables V and VI, Fig. 3) from the public packet captures, the standalone test programs and recorded outputs of the KEM tests (known-answer test, self-consistency and benchmarks on a PC, a Raspberry Pi Pico and an ESP32), the patch that implements the corrections for findings F2 to F6 together with the activation self-test, the MAVLink dialect message list, and the handshake transcript and key schedule as the flight-controller firmware computes them.</p><p>The evaluated firmware and the packet captures are not included: they are the ArduPilot fork at commit b402392 of cdcp2/ardupilot_post_quantum_kem (cloned with <code>--recursive</code>), which the manuscript cites. The ground-station software was not archived.</p>",
+  "creators": [
+    {
+      "name": "Segura Castro, Nicolás",
+      "affiliation": "Systems and Computing Engineering Department, Universidad de los Andes, Bogotá, Colombia",
+      "orcid": "0009-0006-7721-6944"
+    },
+    {
+      "name": "Casadiego, Carlos David",
+      "affiliation": "Systems and Computing Engineering Department, Universidad de los Andes, Bogotá, Colombia",
+      "orcid": "0009-0002-8710-3514"
+    },
+    {
+      "name": "Vera, Javier",
+      "affiliation": "Systems and Computing Engineering Department, Universidad de los Andes, Bogotá, Colombia",
+      "orcid": "0009-0007-8949-1270"
+    },
+    {
+      "name": "Gauthier-Umaña, Valérie",
+      "affiliation": "Systems and Computing Engineering Department, Universidad de los Andes, Bogotá, Colombia",
+      "orcid": "0000-0003-0909-7091"
+    }
+  ],
+  "keywords": [
+    "MAVLink",
+    "ArduPilot",
+    "HQC",
+    "KEMTLS-PDK",
+    "post-quantum cryptography",
+    "UAV security"
+  ],
+  "license": "GPL-3.0",
+  "access_right": "open",
+  "version": "1.0.0",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/cdcp2/ardupilot_post_quantum_kem/tree/b4023923c08dacbaf959f62825a1152c0e4d0870",
+      "relation": "requires",
+      "resource_type": "software"
+    }
+  ],
+  "notes": "The evaluated firmware and the packet captures are the ArduPilot fork at commit b402392 of cdcp2/ardupilot_post_quantum_kem; this archive holds the analysis scripts, test programs, recorded outputs and corrections only."
+}

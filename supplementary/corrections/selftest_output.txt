@@ -1,0 +1,6 @@
+AP_KEM self-test, run on the first handshake (detects F5 and F6)
+  reference tree (upstream PQClean)              ACCEPT (expected ACCEPT)  ok
+  fork tree before cd7be51                       ACCEPT (expected ACCEPT)  ok
+  evaluated tree b402392 (F6)                    REJECT (expected REJECT)  ok
+  reference tree, random source down (F5)        REJECT (expected REJECT)  ok
+cases whose verdict differs from the expected one: 0

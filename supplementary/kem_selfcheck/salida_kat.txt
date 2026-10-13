@@ -1,0 +1,7 @@
+# PQClean HQC-128 known-answer test (test/crypto_kem/hqckat.c + test/common/hqckatrng.c)
+# published nistkat-sha256 (PQClean crypto_kem/hqc-128/META.yml):
+74290ad7a789c01aa92cd7f72f1b5ba5fa30a58294cdf2df52b9c76c3aafba3b
+
+74290ad7a789c01aa92cd7f72f1b5ba5fa30a58294cdf2df52b9c76c3aafba3b  PQClean upstream hqc-128 clean
+74290ad7a789c01aa92cd7f72f1b5ba5fa30a58294cdf2df52b9c76c3aafba3b  fork tree before commit cd7be51
+8ad33c20db3ac9c94b24f58a36aaa94a1bd12f3786e8fd91ece2ba0939c88669  evaluated tree (b402392)

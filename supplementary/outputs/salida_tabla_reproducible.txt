@@ -1,0 +1,26 @@
+====================================================================================================
+BLOQUE A  --  corridas de estres R1-R5, sentido FC->GCS
+====================================================================================================
+intentos (rafagas unicas)             105
+completados (terminan en HQC_STATUS)  100   (95.2 %)
+con HQC_ABORT                          0
+intercambio de pk completo (11 PK_ACK) 104
+
+Sobre los 100 completados:
+  CT stream (s)                              n=100  media 0.528  p50 0.527  p95 0.539  min 0.474  max 0.717
+  CT goodput (Mbps)                          n=100  media 0.135  p50 0.135  p95 0.138  min 0.099  max 0.150
+  Ventana FC: HELLO_ACK -> STATUS (s)        n=100  media 0.555  p50 0.551  p95 0.567  min 0.544  max 0.760
+  Factor de retransmision CT (envios/42)     n=100  media 2.53  p50 2.60  p95 2.71  min 2.31  max 2.71
+
+====================================================================================================
+BLOQUE B  --  el UNICO handshake completo con las dos direcciones visibles (n = 1)
+====================================================================================================
+  Total (primer HQC -> ultimo HQC)             0.6049 s
+  HELLO -> HELLO_ACK                           0.0547 s
+  PK: primer PK_CHUNK -> ultimo PK_ACK         0.1176 s
+  CT: primer CT_CHUNK -> ultimo CT_CHUNK       0.5200 s
+  ultimo CT_ACK -> FINISH                      0.0020 s
+  FINISH -> STATUS                             0.1367 s
+  CT_CHUNK                                     97 envios / 42 fragmentos = 2.31x
+
+Este bloque es una traza ilustrativa, no una estadistica: n = 1.

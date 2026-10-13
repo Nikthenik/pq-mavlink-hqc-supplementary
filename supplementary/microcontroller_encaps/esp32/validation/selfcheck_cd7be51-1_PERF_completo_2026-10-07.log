@@ -1,0 +1,48 @@
+[0;32mI (176) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (177) boot: Disabling RNG early entropy source...[0m
+[0;32mI (189) cpu_start: Multicore app[0m
+[0;32mI (197) cpu_start: Pro cpu start user code[0m
+[0;32mI (197) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (197) app_init: Application information:[0m
+[0;32mI (200) app_init: Project name:     hqc_encaps_esp32[0m
+[0;32mI (206) app_init: App version:      1[0m
+[0;32mI (210) app_init: Compile time:     Oct  6 2026 23:56:11[0m
+[0;32mI (216) app_init: ELF file SHA256:  cff8cd3c1...[0m
+[0;32mI (221) app_init: ESP-IDF:          c54ee794[0m
+[0;32mI (226) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (231) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (236) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (241) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (248) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (254) heap_init: At 3FFB5890 len 0002A770 (169 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (267) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (273) heap_init: At 4008BF24 len 000140DC (80 KiB): IRAM[0m
+[0;32mI (281) spi_flash: detected chip: generic[0m
+[0;32mI (284) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (302) main_task: Started on CPU0[0m
+[0;32mI (312) main_task: Calling app_main()[0m
+=== selfcheck_esp32 -- HQC-128 (PQClean) en ESP32 (Xtensa LX6) ===
+arbol del KEM compilado: cd7be51~1
+PQCLEAN_HQC128_CLEAN_CRYPTO_PUBLICKEYBYTES = 2249
+PQCLEAN_HQC128_CLEAN_CRYPTO_CIPHERTEXTBYTES = 4433
+N_MUESTRAS = 100
+
+  [0/100] enc 971832 us, fallos hasta ahora: 0
+  [10/100] enc 971562 us, fallos hasta ahora: 0
+  [20/100] enc 971562 us, fallos hasta ahora: 0
+  [30/100] enc 971562 us, fallos hasta ahora: 0
+  [40/100] enc 971562 us, fallos hasta ahora: 0
+  [50/100] enc 971562 us, fallos hasta ahora: 0
+  [60/100] enc 971562 us, fallos hasta ahora: 0
+  [70/100] enc 971562 us, fallos hasta ahora: 0
+  [80/100] enc 971562 us, fallos hasta ahora: 0
+  [90/100] enc 971562 us, fallos hasta ahora: 0
+
+=== Resultado ===
+descapsulaciones que NO devolvieron el secreto encapsulado: 0 de 100
+crypto_kem_dec devolvio distinto de 0: 0 de 100
+encapsulacion: mediana 971562 us, p95 971633 us, min 971562 us, max 971832 us
+
+=== FIN ===

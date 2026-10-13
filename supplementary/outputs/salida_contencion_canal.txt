@@ -1,0 +1,8 @@
+========================================================================================================
+CONTENCION DEL CANAL DURANTE EL HANDSHAKE -- R1-R5, trafico que emite el FC
+========================================================================================================
+  Intervalo HEARTBEAT sin handshake en medio     n=1717  media 1.008  p50 0.930  p95 2.354  max 142.489 s
+  Intervalo HEARTBEAT con un handshake en medio  n=163   media 0.626  p50 0.861  p95 1.071  max 1.103 s
+
+  Tasa de tramas no-HQC del FC fuera de handshakes : 2.29 tramas/s  (4069 en 1776 s)
+  Tasa de tramas no-HQC del FC dentro de handshakes: 26.81 tramas/s  (1552 en 57.9 s)
